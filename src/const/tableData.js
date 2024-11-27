@@ -5,9 +5,14 @@ export const contactModalCommonColumns = [
     flex: 0.1,
   },
   {
+    field: "type",
+    headerName: "Node",
+    flex: 0.5,
+  },
+  {
     field: "left",
     headerName: "Left",
-    flex: 0.1,
+    flex: 0.15,
   },
   {
     field: "right",
@@ -15,13 +20,8 @@ export const contactModalCommonColumns = [
     flex: 0.15,
   },
   {
-    field: "type",
-    headerName: "Type",
-    flex: 0.25,
-  },
-  {
     field: "depth",
     headerName: "Depth",
-    flex: 0.25,
+    flex: 0.1,
   },
 ];
