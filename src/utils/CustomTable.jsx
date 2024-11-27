@@ -21,10 +21,6 @@ function CustomTable({
         "& .MuiDataGrid-root": {
           fontSize: "1.2rem",
         },
-        // "& .MuiDataGrid-columnHeaderCheckbox .MuiDataGrid-columnHeaderTitleContainer":
-        //   {
-        //     display: "none",
-        //   },
       }}
     >
       <Box>
@@ -32,7 +28,6 @@ function CustomTable({
           columnHeaderHeight={25}
           rowHeight={35}
           hideFooter={true}
-          // checkboxSelection
           rows={rowData || []}
           columns={columnData}
           onRowSelectionModelChange={handleSelectionChange}

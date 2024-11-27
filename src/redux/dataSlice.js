@@ -1,22 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  transformedData: [], // Initial state for the transformed data
+  data: [],
+  hierarchicalData: [],
 };
 
 const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    setTransformedData: (state, action) => {
-      state.transformedData = action.payload;
+    setNestedData: (state, action) => {
+      state.data = action.payload;
     },
-    clearTransformedData: (state) => {
-      state.transformedData = [];
+    setHierarchicalData: (state, action) => {
+      state.hierarchicalData = action.payload;
+    },
+    clearNestedData: (state) => {
+      state.data = [];
+    },
+    clearHierarchicalData: (state) => {
+      state.hierarchicalData = [];
     },
   },
 });
 
-export const { setTransformedData, clearTransformedData } = dataSlice.actions;
+export const {
+  setNestedData,
+  setHierarchicalData,
+  clearNestedData,
+  clearHierarchicalData,
+} = dataSlice.actions;
 
 export default dataSlice.reducer;
