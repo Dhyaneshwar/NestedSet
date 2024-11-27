@@ -1,5 +1,7 @@
 import "./App.css";
+import { contactModalCommonColumns } from "./const/tableData";
 import { useFetch } from "./customHooks/useFetch";
+import CustomTable from "./utils/CustomTable";
 
 function App() {
   const { data, loading, error } = useFetch("https://api.mocki.io/v2/7brybvwl");
@@ -12,11 +14,7 @@ function App() {
     return <h1>Error while loading</h1>;
   }
 
-  return (
-    <h1 className="bg-slate-500 text-center text-2xl font-semibold">
-      {JSON.stringify(data)}
-    </h1>
-  );
+  return <CustomTable rowData={data} columnData={contactModalCommonColumns} />;
 }
 
 export default App;

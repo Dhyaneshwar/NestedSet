@@ -5,26 +5,21 @@ function CustomTable({
   rowData,
   columnData,
   height = "78%",
-  setSelectedRows = () => {},
-  overflow = true,
+  //   setSelectedRows = () => {},
+  //   overflow = true,
 }) {
-  const handleSelectionChange = (selectedRowIds) => {
-    setSelectedRows(selectedRowIds);
-  };
-  const overflowWidth = overflow ? "1400px" : "100%";
-  const overflowValue = overflow ? "auto" : "inherit";
+  //   const handleSelectionChange = (selectedRowIds) => {
+  //     setSelectedRows(selectedRowIds);
+  //   };
   return (
     <Box
-      mt="0.5rem"
-      p="0 0.5rem"
+      mt="1.5rem"
+      p="1 1.5rem"
       sx={{
         height,
         width: "100%",
-        overflowX: overflowValue,
         overflowY: "auto",
         "& .MuiDataGrid-root": {
-          color: "#d1d3da",
-          border: "none",
           fontSize: "1.2rem",
         },
         "& .MuiDataGrid-columnHeaderCheckbox .MuiDataGrid-columnHeaderTitleContainer":
@@ -33,7 +28,7 @@ function CustomTable({
           },
       }}
     >
-      <Box width={overflowWidth}>
+      <Box>
         <DataGrid
           columnHeaderHeight={25}
           rowHeight={35}
@@ -41,7 +36,7 @@ function CustomTable({
           checkboxSelection
           rows={rowData || []}
           columns={columnData}
-          onRowSelectionModelChange={handleSelectionChange}
+          //   onRowSelectionModelChange={handleSelectionChange}
         />
       </Box>
     </Box>
