@@ -61,7 +61,7 @@ function DashboardPage() {
           columnData={contactModalCommonColumns}
           setSelectedRow={setRowData}
         />
-        <Link to="/visual">Click Here</Link>
+        <Link to="/visualise">Click Here</Link>
       </div>
     </>
   );

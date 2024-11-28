@@ -60,7 +60,10 @@ const TreeChart = ({ data }) => {
         .append("text")
         .attr("dx", 10)
         .attr("dy", 3)
-        .text((d) => `Type: ${d.data.type}, ID: ${d.data.id}`)
+        .text(
+          (d) =>
+            `${d.data.id} - ${d.data.type} (${d.data.left} : ${d.data.right}) `,
+        )
         .attr("font-size", "12px")
         .attr("fill", "black");
     } catch (error) {
