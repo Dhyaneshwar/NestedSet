@@ -66,6 +66,8 @@ function DashboardPage() {
           columnData={contactModalCommonColumns}
           setSelectedRow={setRowData}
         />
+      </div>
+      <div className="mt-10 text-center text-lg font-semibold text-blue-500">
         <Link to="/visualise">Click Here To Visualize the Data</Link>
       </div>
     </div>
