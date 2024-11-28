@@ -11,8 +11,8 @@ const PackChart = ({ data }) => {
   const svgRef = useRef();
 
   useEffect(() => {
-    const width = 400;
-    const height = 400;
+    const width = 600;
+    const height = 600;
 
     const root = d3
       .hierarchy(data)
@@ -46,10 +46,10 @@ const PackChart = ({ data }) => {
 
     nodeGroup
       .append("text")
-      .attr("dy", (d) => -d.r + 12)
+      .attr("dy", (d) => -d.r + 17)
       .attr("text-anchor", "middle")
       .text((d) => `${d.data.id} - ${d.data.type}`)
-      .style("font-size", (d) => `${Math.min(d.r / 3, 10)}px`)
+      .style("font-size", (d) => `${Math.min(d.r / 3, 12)}px`)
       .style("fill", "black")
       .style("pointer-events", "none");
   }, [data]);

@@ -5,8 +5,8 @@ const TreeChart = ({ data }) => {
   const svgRef = useRef();
 
   useEffect(() => {
-    const width = 850;
-    const height = 700;
+    const width = 900;
+    const height = 800;
 
     d3.select(svgRef.current).selectAll("*").remove();
 

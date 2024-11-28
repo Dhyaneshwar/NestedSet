@@ -10,11 +10,11 @@ function VisualisePage({ hierarchicalData }) {
   return (
     <>
       <Title />
-      <div className="flex w-full items-center justify-center">
+      <div className="flex w-full flex-col items-center justify-center">
         <TreeChart data={hierarchicalData} />
         <PackChart data={hierarchicalData} />
       </div>
-      <div className="text-center text-lg font-semibold text-blue-500">
+      <div className="my-10 text-center text-lg font-semibold text-blue-500">
         <Link to="/dashboard">Click Here To View the Table</Link>
       </div>
     </>
