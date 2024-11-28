@@ -1,27 +1,13 @@
 import React from "react";
-import TreeChart from "../utils/CustomTree";
-import { selectHierarchicalData } from "../redux/dataSelectors";
+import { selectData, selectHierarchicalData } from "../redux/dataSelectors";
 import { connect } from "react-redux";
-import PackChart from "../utils/CustomPack";
-import Title from "./Title";
-import { Link } from "react-router-dom";
 
-function VisualisePage({ hierarchicalData }) {
-  return (
-    <>
-      <Title />
-      <div className="flex w-full flex-col items-center justify-center">
-        <TreeChart data={hierarchicalData} />
-        <PackChart data={hierarchicalData} />
-      </div>
-      <div className="my-10 text-center text-lg font-semibold text-blue-500">
-        <Link to="/dashboard">Click Here To View the Table</Link>
-      </div>
-    </>
-  );
+function VisualisePage({ data, hierarchicalData }) {
+  return <div>hi</div>;
 }
 
 const mapStateToProps = (state) => ({
+  data: selectData(state),
   hierarchicalData: selectHierarchicalData(state),
 });
 
