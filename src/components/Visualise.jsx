@@ -3,13 +3,21 @@ import TreeChart from "../utils/CustomTree";
 import { selectHierarchicalData } from "../redux/dataSelectors";
 import { connect } from "react-redux";
 import PackChart from "../utils/CustomPack";
+import Title from "./Title";
+import { Link } from "react-router-dom";
 
 function VisualisePage({ hierarchicalData }) {
   return (
-    <div className="flex w-full items-center justify-center">
-      <TreeChart data={hierarchicalData} />
-      <PackChart data={hierarchicalData} />
-    </div>
+    <>
+      <Title />
+      <div className="flex w-full items-center justify-center">
+        <TreeChart data={hierarchicalData} />
+        <PackChart data={hierarchicalData} />
+      </div>
+      <div className="text-center text-lg font-semibold text-blue-500">
+        <Link to="/dashboard">Click Here To View the Table</Link>
+      </div>
+    </>
   );
 }
 

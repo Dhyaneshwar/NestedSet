@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Title from "./Title";
 
 function HomePage() {
   return (
     <div className="mx-10 my-20 p-6">
-      <h1 className="mb-2 text-center text-4xl font-bold text-blue-600">
-        Nested Set Viewer Application
-      </h1>
+      <Title />
       <p className="mb-6 text-center text-lg">
         A modern web application for visualizing hierarchical data using the{" "}
         <a
@@ -52,7 +51,7 @@ function HomePage() {
               styling.
             </li>
             <li>
-              <strong>Recharts:</strong> Visualizes hierarchical data with
+              <strong>D3.JS:</strong> Visualizes hierarchical data with
               interactive charts.
             </li>
           </ul>

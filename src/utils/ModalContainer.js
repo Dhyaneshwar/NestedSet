@@ -6,16 +6,16 @@ const ModalContainer = styled(Box)(({ wd, ht }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: wd || "80%",
-  height: ht || "80%",
-  backgroundColor: "#6b6d74",
+  width: wd || "40%",
+  height: ht || "40%",
+  backgroundColor: "#fff",
   border: "2px solid #000",
   boxShadow: 24,
   padding: 4,
   overflowY: "auto",
   borderRadius: "10px",
   fontSize: "20px",
-  padding: "30px",
+  padding: "50px",
 }));
 
 export default ModalContainer;

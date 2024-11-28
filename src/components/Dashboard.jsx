@@ -8,6 +8,7 @@ import { createNestedSet, filterData } from "../utils/transformer";
 import { setHierarchicalData, setNestedData } from "../redux/dataSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Title from "./Title";
 
 function DashboardPage() {
   const {
@@ -47,11 +48,15 @@ function DashboardPage() {
   }
 
   return (
-    <>
+    <div className="my-10">
+      <Title />
       {rowData && (
         <Modal open={rowData} onClose={handleModalClose}>
           <ModalContainer>
-            <h1>{filterData(rowData, data)}</h1>
+            <h1 className="mb-5 text-center text-2xl font-bold text-blue-600">
+              Details about the Selected Row
+            </h1>
+            <p>{filterData(rowData, data)}</p>
           </ModalContainer>
         </Modal>
       )}
@@ -61,9 +66,9 @@ function DashboardPage() {
           columnData={contactModalCommonColumns}
           setSelectedRow={setRowData}
         />
-        <Link to="/visualise">Click Here</Link>
+        <Link to="/visualise">Click Here To Visualize the Data</Link>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -5,8 +5,8 @@ const TreeChart = ({ data }) => {
   const svgRef = useRef();
 
   useEffect(() => {
-    const width = 900;
-    const height = 800;
+    const width = 850;
+    const height = 700;
 
     d3.select(svgRef.current).selectAll("*").remove();
 
@@ -17,7 +17,7 @@ const TreeChart = ({ data }) => {
       .append("g")
       .attr("transform", "translate(50,50)");
 
-    const treeLayout = d3.tree().size([height - 100, width - 200]);
+    const treeLayout = d3.tree().size([height - 100, width - 250]);
 
     try {
       const root = d3.hierarchy(data);
@@ -59,7 +59,7 @@ const TreeChart = ({ data }) => {
       node
         .append("text")
         .attr("dx", 10)
-        .attr("dy", 3)
+        .attr("dy", 5)
         .text(
           (d) =>
             `${d.data.id} - ${d.data.type} (${d.data.left} : ${d.data.right}) `,
