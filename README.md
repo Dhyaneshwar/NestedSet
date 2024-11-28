@@ -1,4 +1,4 @@
-# NestedSet - ReadMe
+# NestedSet - The Hierarchical Visualiser
 
 Welcome to the **NestedSet** project! This is a modern, fast, and efficient web application built with **React** and **Tailwind**. This README file will guide you through the process of installing and running the project.
 
