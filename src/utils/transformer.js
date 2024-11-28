@@ -49,7 +49,7 @@ export const createNestedSet = (flatData) => {
       stack.push(item);
     });
 
-    return root;
+    return root[0];
   };
 
   return buildTree(sortedData);

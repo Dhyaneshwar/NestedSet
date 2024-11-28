@@ -7,6 +7,7 @@ import ModalContainer from "../utils/ModalContainer";
 import { createNestedSet, filterData } from "../utils/transformer";
 import { setHierarchicalData, setNestedData } from "../redux/dataSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function DashboardPage() {
   const {
@@ -54,12 +55,13 @@ function DashboardPage() {
           </ModalContainer>
         </Modal>
       )}
-      <div className="flex h-screen w-screen items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <CustomTable
           rowData={data}
           columnData={contactModalCommonColumns}
           setSelectedRow={setRowData}
         />
+        <Link to="/visual">Click Here</Link>
       </div>
     </>
   );

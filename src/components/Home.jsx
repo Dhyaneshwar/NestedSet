@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -91,10 +92,10 @@ function HomePage() {
         efficient and scalable front-end development practices.
       </p>
       <p className="text-center text-lg text-blue-500">
-        <a href="/dashboard">
+        <Link to="/dashboard">
           Start exploring the hierarchical data now and enjoy seamless
           interaction and data visualization!
-        </a>
+        </Link>
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ import dataReducer from "./dataSlice";
 
 export const store = configureStore({
   reducer: {
-    nestedData: dataReducer,
+    nestedSet: dataReducer,
   },
 });
 
