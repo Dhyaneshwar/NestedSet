@@ -1,9 +1,16 @@
 import React from "react";
 import { selectData, selectHierarchicalData } from "../redux/dataSelectors";
 import { connect } from "react-redux";
+import TreeGraph from "./TreeGraph";
+import Title from "./Title";
 
 function VisualisePage({ data, hierarchicalData }) {
-  return <div>hi</div>;
+  return (
+    <>
+      <Title />
+      <TreeGraph treeData={hierarchicalData} />
+    </>
+  );
 }
 
 const mapStateToProps = (state) => ({
