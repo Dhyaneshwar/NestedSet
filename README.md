@@ -36,7 +36,7 @@ Follow these clear and simple steps to get started:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Dhyaneshwar/NestedSet
+   git clone https://github.com/Dhyaneshwar/NestedSet.git
    ```
    
 2. **Navigate to the project directory**:
