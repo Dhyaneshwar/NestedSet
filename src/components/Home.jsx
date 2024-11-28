@@ -36,7 +36,7 @@ function HomePage() {
           <ul className="mb-6 list-inside list-disc">
             <li>
               <strong>React Framework:</strong> Used to create a dynamic and
-              responsive user interface.
+              responsive UI.
             </li>
             <li>
               <strong>Tailwind CSS:</strong> Utility-first styling for clean and

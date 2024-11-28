@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: [],
-  hierarchicalData: [],
+  hierarchicalData: {},
 };
 
 const dataSlice = createSlice({
