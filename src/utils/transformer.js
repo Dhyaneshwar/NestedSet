@@ -54,3 +54,40 @@ export const createNestedSet = (flatData) => {
 
   return buildTree(sortedData);
 };
+
+export function findNodeDetails(targetId, tree, ancestors = []) {
+  if (tree.id === targetId) {
+    const parent =
+      ancestors.length > 0 ? ancestors[ancestors.length - 1] : null;
+    const siblings = parent
+      ? parent.children
+          .filter((child) => child.id !== targetId)
+          .map((sibling) => sibling.id)
+      : [];
+
+    // Removing the Parent from Ancestors
+    ancestors.pop();
+
+    return {
+      node: tree,
+      parent: parent ? { id: parent.id, type: parent.type } : null,
+      ancestors: ancestors.map((ancestor) => ancestor.id),
+      siblings,
+      children: tree.children.map((child) => ({
+        id: child.id,
+        type: child.type,
+      })),
+    };
+  }
+
+  if (tree.children) {
+    for (const child of tree.children) {
+      const result = findNodeDetails(targetId, child, [...ancestors, tree]);
+      if (result) {
+        return result;
+      }
+    }
+  }
+
+  return null;
+}

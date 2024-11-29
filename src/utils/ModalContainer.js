@@ -6,8 +6,8 @@ const ModalContainer = styled(Box)(({ wd, ht }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: wd || "40%",
-  height: ht || "40%",
+  width: wd || "50%",
+  height: ht || "50%",
   backgroundColor: "#fff",
   border: "2px solid #000",
   boxShadow: 24,
@@ -15,7 +15,7 @@ const ModalContainer = styled(Box)(({ wd, ht }) => ({
   overflowY: "auto",
   borderRadius: "10px",
   fontSize: "20px",
-  padding: "50px",
+  padding: "25px",
 }));
 
 export default ModalContainer;

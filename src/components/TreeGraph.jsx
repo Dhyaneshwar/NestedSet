@@ -39,7 +39,7 @@ const renderTreeNodes = (node, x, y, level, positions, lines) => {
   }
 };
 
-const TreeGraph = ({ treeData }) => {
+const TreeGraph = ({ treeData, setSelectedRow }) => {
   const positions = [];
   const lines = [];
 
@@ -67,7 +67,7 @@ const TreeGraph = ({ treeData }) => {
         <g
           className="cursor-pointer"
           key={node.id}
-          onClick={() => console.log(node.id, node.name)}
+          onClick={() => setSelectedRow(node.id)}
         >
           <circle cx={node.x} cy={node.y} r={20} fill="#ff6347" />
           <text
