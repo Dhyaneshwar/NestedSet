@@ -44,13 +44,13 @@ const TreeGraph = ({ treeData, setSelectedRow }) => {
   const lines = [];
 
   // Display vertically
-  renderTreeNodes(treeData, 750, 50, 0, positions, lines);
+  renderTreeNodes(treeData, 750, 35, 0, positions, lines);
 
   // Display horizontally
   // renderTreeNodes(treeData, 250, 350, 0, positions, lines);
 
   return (
-    <svg width="100%" height="700px">
+    <svg width="100%" height="655px">
       {lines.map((line, index) => (
         <line
           key={index}

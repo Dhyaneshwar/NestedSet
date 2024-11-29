@@ -4,11 +4,16 @@ import { useFetch } from "../customHooks/useFetch";
 import CustomTable from "../utils/CustomTable";
 import { Modal } from "@mui/material";
 import ModalContainer from "../utils/ModalContainer";
-import { createNestedSet, filterData } from "../utils/transformer";
+import {
+  createNestedSet,
+  filterData,
+  findNodeDetails,
+} from "../utils/transformer";
 import { setHierarchicalData, setNestedData } from "../redux/dataSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Title from "./Title";
+import CustomModal from "../utils/CustomModal";
 
 function DashboardPage() {
   const {
@@ -47,18 +52,18 @@ function DashboardPage() {
     );
   }
 
+  const hierarchicalData = createNestedSet(data);
+
   return (
     <div className="my-10">
       <Title />
       {rowData && (
-        <Modal open={rowData} onClose={handleModalClose}>
-          <ModalContainer>
-            <h1 className="mb-5 text-center text-2xl font-bold text-blue-600">
-              Details about the Selected Row
-            </h1>
-            <p>{filterData(rowData, data)}</p>
-          </ModalContainer>
-        </Modal>
+        <CustomModal
+          rowData={rowData}
+          data={filterData(rowData, data)}
+          detailedData={findNodeDetails(rowData, hierarchicalData)}
+          handleModalClose={handleModalClose}
+        />
       )}
       <div className="flex flex-col items-center justify-center">
         <CustomTable

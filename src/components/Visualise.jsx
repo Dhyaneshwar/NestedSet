@@ -5,6 +5,7 @@ import TreeGraph from "./TreeGraph";
 import Title from "./Title";
 import { filterData, findNodeDetails } from "../utils/transformer";
 import CustomModal from "../utils/CustomModal";
+import { Link } from "react-router-dom";
 
 function VisualisePage({ data, hierarchicalData }) {
   const [rowData, setRowData] = useState(null);
@@ -24,6 +25,9 @@ function VisualisePage({ data, hierarchicalData }) {
         />
       )}
       <TreeGraph treeData={hierarchicalData} setSelectedRow={setRowData} />
+      <div className="mt-10 text-center text-lg font-semibold text-blue-500">
+        <Link to="/dashboard">Click Here To View the Table</Link>
+      </div>
     </>
   );
 }
