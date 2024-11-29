@@ -148,20 +148,20 @@ At the bottom, there is a clickable link: **"Click Here To Visualize the Data"**
 
 ## Visualise Page
 <div>
-  <img src="https://github.com/user-attachments/assets/0f4673c7-e17a-47a4-ae5a-2bb78b1a495e" alt="image 1" width="500">
-</div>
-<div>
-  <img src="https://github.com/user-attachments/assets/9daafc67-2e27-45a3-bde9-4f5c2c86e370" alt="image 2" width="500">
+  <img src="https://github.com/user-attachments/assets/722c6ae7-1a16-45f8-be44-1e5c4bf3a588" alt="image 1" width="500">
 </div>
 
+The **Visualize Page** presents hierarchical data through interactive, custom-built visualizations developed entirely without the use of third-party libraries. It features:
 
-The **Visualize Page** showcases hierarchical data using interactive visualizations created with **D3.js**. It provides two distinct views:
-
-1. **Tree View**: Displays the hierarchical structure in a tree diagram, making it easy to understand parent-child relationships and the overall hierarchy.
-
-2. **Packed Circle View**: Represents the nested data as concentric circles, visually emphasizing depth and grouping.
+1. **Tree View**: A dynamic tree diagram that visually represents the hierarchical structure, offering a clear and intuitive understanding of parent-child relationships and the overall data hierarchy.
 
 At the bottom of the page, a clickable link **"Click Here To View the Table"** allows users to navigate back to the Dashboard page. This page combines interactivity and clarity to enhance data exploration.
+
+<div>
+  <img src="https://github.com/user-attachments/assets/46c92ace-a71d-4f17-b351-9919751dc8de" alt="image 1" width="500">
+</div>
+
+The tree nodes are fully interactive. When a user clicks on any node, a modal is triggered to display comprehensive details about the selected node, enhancing the user experience with clear and contextual information.
 
 ---
 
